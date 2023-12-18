@@ -3,16 +3,17 @@
     <head>
         <title>ContactMe</title>
         <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="./icons/fontawesome-free-6.4.2-web/css/all.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
-            <div class="logo">
+        <header class="flex flex-wrap justify-between items-center px-2 py-5 bg-black text-white">
+            <div class="bg-red-500 text-2xl rounded-full p-1">
                 <span>ND</span>
             </div>
-            <nav>
-                <ul>
+            <nav class="hidden md:block">
+                <ul class="flex gap-3 text-lg">
                     <li><a href="./Home.html">Home</a></li>
                     <li><a href="./AboutMe.html">About</a></li>
                     <li><a href="./Projects.html">Projects</a></li>
@@ -20,45 +21,53 @@
                     <li><a href="./ContactMe.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="nav-toggler"><i class="fas fa-bars"></i></div>
-            <div id="nav-drop" ></div>
+            <div id="nav-toggler" class="text-2xl md:hidden"><i class="fas fa-bars"></i></div>
+            <div id="nav-drop" class="hidden w-full flex justify-center border-t-2 border-white my-2">
+                <ul class="flex flex-col gap-3 pt-2 text-xl">
+                    <li ><a href="./Home.html">Home</a></li>
+                    <li ><a href="./AboutMe.html">About</a></li>
+                    <li ><a href="./Projects.html">Projects</a></li>
+                    <li ><a href="./Services.html">Services</a></li>
+                    <li ><a href="./ContactMe.html">Contact</a></li>
+                </ul>
+            </div>
         </header>
         <main>
             <section>
-                <div id="container">
-                    <div class="intro">
-                        <h1>CONTACT</h1>
-                        <div class="underline"></div>
-                        <p>Feel free to Contact me by submitting the
+                <div id="container" class="">
+                    <div class="w-4/5 mx-auto text-center mt-3">
+                        <h1 class="text-3xl font-bold lg:text-5xl">CONTACT</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
+                        <p class="mb-5">Feel free to Contact me by submitting the
                             form below and I will get back to you
                             as soon as possible
                         </p>
 
-                        <a href="./data/My_CV.pdf" download="NaolD_CV" class="button-link">Download CV</a>
+                        <a href="#" download="NaolD_CV" class="bg-red-500 text-sm text-white p-2 rounded-3xl">Download CV</a>
 
                     </div>
-                    <form>
+                    <form class="w-3/5 max-w-md mx-auto my-10 bg-gray-300 p-5 rounded">
                         <div>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Enter Your Name">
+                            <label class="block mb-1" for="name">Name</label>
+                            <input class="w-full pl-2" type="text" id="name" placeholder="Enter Your Name">
                         </div>
-                        <div>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Enter Your Email">
+                        <div class="my-5">
+                            <label class="block mb-1" for="email">Email</label>
+                            <input class="w-full pl-2" type="email" id="email" placeholder="Enter Your Email">
                         </div>
-                        <div>
-                            <label>Message</label>
-                            <textarea placeholder="Enter Your Message"></textarea>
+                        <div class="mb-5">
+                            <label class="block mb-1">Message</label>
+                            <textarea class="w-full pl-2" placeholder="Enter Your Message"></textarea>
                         </div>
-                        <button type="submit">Send Message</button>
+                        <button class="bg-red-500 text-sm text-white p-2 rounded" type="submit">Send Message</button>
                     </form>
                 </div>
             </section>
         </main>
-        <footer>
-            <div id="add-info">
+        <footer class="bg-black text-white">
+            <div class="flex justify-around ">
                 <div class="address">
-                  <h2>Address</h2>
+                  <h2 class="text-lg">Address</h2>
                   <address>
                       <p>Ethiopia, Addis Ababa</p>
                       <p>5kilo kingGeorge VI Street</p>
@@ -67,9 +76,9 @@
                   </address>
                 </div>
 
-                <div id="social">
-                    <h2>Social media</h2>
-                    <div>
+                <div class="self-center">
+                    <h2 class="text-lg">Social media</h2>
+                    <div class="flex gap-2">
                       <a href="https://www.linkedin.com/in/naol-daba-1b42b4258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BL%2BAJLt7nSaGwTQKpt70LCA%3D%3D" target="_blank"><i class="linkedin fa-brands fa-linkedin"></i></a>
                       <a href="https://github.com/Naoldaba" target="_blank"><i class="github fa-brands fa-github"></i></a>
                       <a href="#"><i class="facebook fa-brands fa-facebook-f"></i></a>
@@ -79,9 +88,10 @@
                 </div>
 
             </div>
-            <div id="copyright">
+            <div class="text-center text-xs border-t-2 border-white pt-1 mt-1">
                 <span> &copy; Copyright 2023. Made by <a>Naol Daba</a></span>
             </div>
         </footer>
+        <script src="./js/index.js"></script>
     </body>
 </html>

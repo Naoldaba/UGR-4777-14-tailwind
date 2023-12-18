@@ -3,16 +3,17 @@
     <head>
         <title>Services</title>
         <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="./icons/fontawesome-free-6.4.2-web/css/all.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
-            <div class="logo">
+        <header class="flex flex-wrap justify-between items-center px-2 py-5 bg-black text-white">
+            <div class="bg-red-500 text-2xl rounded-full p-1">
                 <span>ND</span>
             </div>
-            <nav>
-                <ul>
+            <nav class="hidden md:block">
+                <ul class="flex gap-3 text-lg">
                     <li><a href="./Home.html">Home</a></li>
                     <li><a href="./AboutMe.html">About</a></li>
                     <li><a href="./Projects.html">Projects</a></li>
@@ -20,30 +21,38 @@
                     <li><a href="./ContactMe.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="nav-toggler"><i class="fas fa-bars"></i></div>
-            <div id="nav-drop"></div>
+            <div id="nav-toggler" class="text-2xl md:hidden"><i class="fas fa-bars"></i></div>
+            <div id="nav-drop" class="hidden w-full flex justify-center border-t-2 border-white my-2">
+                <ul class="flex flex-col gap-3 pt-2 text-xl">
+                    <li ><a href="./Home.html">Home</a></li>
+                    <li ><a href="./AboutMe.html">About</a></li>
+                    <li ><a href="./Projects.html">Projects</a></li>
+                    <li ><a href="./Services.html">Services</a></li>
+                    <li ><a href="./ContactMe.html">Contact</a></li>
+                </ul>
+            </div>
         </header>
         <main>
             <div id="services-main">
-                <section  id="section-1">
-                    <div>
-                        <h1>Services</h1>
-                        <div class="underline"></div>
-                        <p>Welcome to my Software Engineer Services
+                <section class="h-screen flex justify-center items-center" id="section-1" >
+                    <div class="w-4/5 text-center">
+                        <h1 class="text-3xl md:text-5xl font-bold lg:text-5xl">Services</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
+                        <p class="mb-5 md:text-xl">Welcome to my Software Engineer Services
                             page, where I offer a range of expertise
                             to meet your software development needs.
                             With a wealth of experience in the
                             industry, I'm well-equipped to deliver
                             tailored solutions for a variety of
                             projects. Here are the services I provide:</p>
-                        <a href="./ContactMe.html" class="button-link">Contact Me</a>
+                        <a href="./ContactMe.html" class="bg-red-500 text-sm text-white p-2 rounded-3xl">Contact Me</a>
                     </div>
                 </section>
                 <section id="section-2">
-                    <div>
-                        <div class="services">
-                            <div>
-                                <h3>Full Stack development</h3>
+                    <div class="mx-12">
+                        <div class="flex gap-4 mb-10">
+                            <div >
+                                <h3 class="text-xl font-bold">Full Stack development</h3>
                                 <p>With proficiency in both frontend
                                      and backend technologies, I offer
                                      end-to-end development services.
@@ -52,13 +61,13 @@
                                      backend systems, and integrating
                                      databases and third-party APIs.</p>
                             </div>
-                            <video src="./videos/production_id_4974884(1080p).mp4" loop autoplay></video>
+                            <video class="w-1/2 max-w-md rounded" src="./videos/production_id_4974884(1080p).mp4" loop autoplay></video>
                         </div>
 
-                        <div class="services">
-                            <video src="./videos/codes_-_23355(720p).mp4" loop autoplay></video>
+                        <div class="flex gap-4 mb-10">
+                            <video class="w-1/2 max-w-md rounded" src="./videos/codes_-_23355(720p).mp4" loop autoplay></video>
                             <div>
-                                <h3>Application Optimization</h3>
+                                <h3 class="text-xl font-bold">Application Optimization</h3>
                                 <p>Is your existing application experiencing
                                     performance bottlenecks? I specialize
                                     in optimizing code and architecture to
@@ -67,9 +76,9 @@
                             </div>
                         </div>
 
-                        <div class="services">
+                        <div class="flex gap-4 mb-10">
                             <div>
-                                <h3>Code Reviews and QA</h3>
+                                <h3 class="text-xl font-bold">Code Reviews and QA</h3>
                                 <p>Thorough code reviews are crucial for
                                     identifying potential issues and ensuring
                                     the highest quality standards. I provide
@@ -78,13 +87,13 @@
                                     code readability, maintainability, and
                                     security.</p>
                             </div>
-                            <video src="./videos/coding_-_123872(720p).mp4" loop autoplay></video>
+                            <video class="w-1/2 max-w-md rounded" src="./videos/coding_-_123872(720p).mp4" loop autoplay></video>
                         </div>
 
-                        <div class="services">
-                            <video src="./videos/laptop_-_1657(720p).mp4" loop autoplay></video>
+                        <div class="flex gap-4 mb-10">
+                            <video class="w-1/2 max-w-md rounded" src="./videos/laptop_-_1657(720p).mp4" loop autoplay></video>
                             <div>
-                                <h3>Maintenance and Support</h3>
+                                <h3 class="text-xl font-bold">Maintenance and Support</h3>
                                 <p>Once your software is deployed, I offer
                                     ongoing maintenance and support services
                                     to ensure it remains up-to-date, secure,
@@ -95,47 +104,47 @@
                         </div>
 
                     </div>
-                    <div id="service-price">
-                        <div id="price-table">
-                            <h2>Services and Pricing</h2>
-                            <table>
+                    <div id="service-price" class="flex flex-wrap justify-center items-center gap-5">
+                        <div id="price-table" class="w-4/5 mb-6 md:w-1/2">
+                            <h2 class="text-2xl font-bold mb-4">Services and Pricing</h2>
+                            <table class="border-2 border-black text-sm md:text-lg">
                                 <tr>
-                                    <th>Service</th>
-                                    <th>Description</th>
-                                    <th>Price</th>
+                                    <th class="border-2 border-black p-2">Service</th>
+                                    <th class="border-2 border-black p-2">Description</th>
+                                    <th class="border-2 border-black p-2">Price</th>
                                 </tr>
                                 <tr>
-                                    <td>Web Development</td>
-                                    <td>End-to-end web development services</td>
-                                    <td><span>$170/hr</span></td>
+                                    <td class="border-2 border-black p-2">Web Development</td>
+                                    <td class="border-2 border-black p-2">End-to-end web development services</td>
+                                    <td class="border-2 border-black p-2"><span>$170/hr</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Responsive Design</td>
-                                    <td>Creating websites that adapt to all devices</td>
-                                    <td><span>$97/hr</span></td>
+                                    <td class="border-2 border-black p-2">Responsive Design</td>
+                                    <td class="border-2 border-black p-2">Creating websites that adapt to all devices</td>
+                                    <td class="border-2 border-black p-2"><span>$97/hr</span></td>
                                 </tr>
                                 <tr>
-                                    <td>Website Maintenance and Support</td>
-                                    <td>Regular updates, bug fixes, and support</td>
-                                    <td><span>$70/hr</span></td>
+                                    <td class="border-2 border-black p-2">Website Maintenance and Support</td>
+                                    <td class="border-2 border-black p-2">Regular updates, bug fixes, and support</td>
+                                    <td class="border-2 border-black p-2"><span>$70/hr</span></td>
                                 </tr>
                                 <tr>
-                                    <td>UI/UX Design Consultation</td>
-                                    <td>Optimizing user interface and experience</td>
-                                    <td>Starting from <span>$89/hr</span></td>
+                                    <td class="border-2 border-black p-2">UI/UX Design Consultation</td>
+                                    <td class="border-2 border-black p-2">Optimizing user interface and experience</td>
+                                    <td class="border-2 border-black p-2">Starting from <span>$89/hr</span></td>
                                 </tr>
                                 <tr>
-                                    <td>SEO Optimization</td>
-                                    <td>Enhancing website ranking and visibility</td>
-                                    <td>Starting from <span>$149/hr</span></td>
+                                    <td class="border-2 border-black p-2">SEO Optimization</td>
+                                    <td class="border-2 border-black p-2">Enhancing website ranking and visibility</td>
+                                    <td class="border-2 border-black p-2">Starting from <span>$149/hr</span></td>
                                 </tr>
                             </table>
                         </div>
 
-                        <article>
-                            <i class="fa-solid fa-thumbs-up"></i>
-                            <h2 id="call">&nbsp;Let's Get Started</h2>
-                            <p>If you're interested in any of the services
+                        <article class="w-2/3 mb-10 md:w-2/5">
+                            <i class="fa-solid fa-thumbs-up text-xl"></i>
+                            <h2 class="inline font-bold text-xl" id="call">&nbsp;Let's Get Started</h2>
+                            <p class="">If you're interested in any of the services
                                 listed above or have a unique project
                                 in mind, feel free to reach out to me at
                                 <span style="color:red;">nahafile@gmail.com</span>. I'm excited to discuss how I
@@ -151,10 +160,10 @@
             </div>
 
         </main>
-        <footer>
-            <div id="add-info">
+        <footer class="bg-black text-white">
+            <div class="flex justify-around ">
                 <div class="address">
-                  <h2>Address</h2>
+                  <h2 class="text-lg">Address</h2>
                   <address>
                       <p>Ethiopia, Addis Ababa</p>
                       <p>5kilo kingGeorge VI Street</p>
@@ -163,9 +172,9 @@
                   </address>
                 </div>
 
-                <div id="social">
-                    <h2>Social media</h2>
-                    <div>
+                <div class="self-center">
+                    <h2 class="text-lg">Social media</h2>
+                    <div class="flex gap-2">
                       <a href="https://www.linkedin.com/in/naol-daba-1b42b4258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BL%2BAJLt7nSaGwTQKpt70LCA%3D%3D" target="_blank"><i class="linkedin fa-brands fa-linkedin"></i></a>
                       <a href="https://github.com/Naoldaba" target="_blank"><i class="github fa-brands fa-github"></i></a>
                       <a href="#"><i class="facebook fa-brands fa-facebook-f"></i></a>
@@ -175,9 +184,10 @@
                 </div>
 
             </div>
-            <div id="copyright">
+            <div class="text-center text-xs border-t-2 border-white pt-1 mt-1">
                 <span> &copy; Copyright 2023. Made by <a>Naol Daba</a></span>
             </div>
         </footer>
+        <script src="./js/index.js"></script>
     </body>
 </html>

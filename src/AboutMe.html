@@ -3,16 +3,17 @@
     <head>
         <title>AboutMe</title>
         <meta charset="UTF-8">
+        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="./icons/fontawesome-free-6.4.2-web/css/all.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <header>
-            <div class="logo">
+        <header class="flex flex-wrap justify-between items-center px-2 py-5 bg-black text-white">
+            <div class="bg-red-500 text-2xl rounded-full p-1">
                 <span>ND</span>
             </div>
-            <nav>
-                <ul>
+            <nav class="hidden md:block">
+                <ul class="flex gap-3 text-lg">
                     <li><a href="./Home.html">Home</a></li>
                     <li><a href="./AboutMe.html">About</a></li>
                     <li><a href="./Projects.html">Projects</a></li>
@@ -20,15 +21,23 @@
                     <li><a href="./ContactMe.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="nav-toggler"><i class="fas fa-bars"></i></div>
-            <div id="nav-drop"></div>
+            <div id="nav-toggler" class="text-2xl md:hidden"><i class="fas fa-bars"></i></div>
+            <div id="nav-drop" class="hidden w-full flex justify-center border-t-2 border-white my-2">
+                <ul class="flex flex-col gap-3 pt-2 text-xl">
+                    <li ><a href="./Home.html">Home</a></li>
+                    <li ><a href="./AboutMe.html">About</a></li>
+                    <li ><a href="./Projects.html">Projects</a></li>
+                    <li ><a href="./Services.html">Services</a></li>
+                    <li ><a href="./ContactMe.html">Contact</a></li>
+                </ul>
+            </div>
         </header>
         <main>
             <div id="about-main">
                 <section>
-                    <div class="box">
-                        <h1>ABOUT ME</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">ABOUT ME</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>Greetings! I'm Naol Daba, a dedicated software
                             engineer passionate about crafting robust
                             and efficient solutions. With
@@ -40,9 +49,9 @@
                     </div>
                 </section>
                 <section>
-                    <div class="box">
-                        <h1>MY JOURNEY</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">MY JOURNEY</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>My journey in software engineering began
                             at 13 when i was grade 7. Since then,
                             I've been on a continuous quest to push
@@ -54,9 +63,9 @@
                     </div>
                 </section>
                 <section>
-                    <div class="box">
-                        <h1>TECHNICAL EXPERTISE</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">TECHNICAL EXPERTISE</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>Proficient in Python, Java React, Nodejs, Expressjs,
                             MySQL, MongoDB, I'm well-versed in building everything
                             from high-performance web applications to
@@ -66,9 +75,9 @@
                     </div>
                 </section>
                 <section>
-                    <div class="box">
-                        <h1>PROBLEM SOLVER EXTRAORDINAIRE</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">PROBLEM SOLVER EXTRAORDINAIRE</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>I thrive on tackling intricate
                             puzzles and finding innovative
                             solutions. Whether it's optimizing
@@ -80,9 +89,9 @@
                     </div>
                 </section>
                 <section>
-                    <div class="box">
-                        <h1>A COLLABORATIVE SPIRIT</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">A COLLABORATIVE SPIRIT</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>I believe in the power of
                             teamwork and thrive in collaborative
                             environments. I've had the privilege
@@ -94,9 +103,9 @@
                     </div>
                 </section>
                 <section>
-                    <div class="box">
-                        <h1>CONTINUOS LEARNING</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">CONTINUOS LEARNING</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>In the ever-evolving world of
                             technology, staying current is
                             imperative. I'm committed to lifelong
@@ -108,9 +117,9 @@
                     </div>
                 </section>
                 <section>
-                    <div class="box">
-                        <h1>BEYOND CODE</h1>
-                        <div class="underline"></div>
+                    <div class="w-4/5 mx-auto mt-16 shadow-2xl p-3 rounded">
+                        <h1 class="text-center text-2xl font-bold">BEYOND CODE</h1>
+                        <div class="underline h-2 bg-red-500 w-10 mx-auto rounded my-3"></div>
                         <p>When I'm not immersed in lines of code,
                             you can find me entertaning my self
                             by swimming, ridding bike, watching movie,
@@ -123,15 +132,16 @@
                 </section>
 
             </div>
-            <audio controls>
-              <source src="./audios/about.mp3" type="audio/mpeg">
+
+            <audio controls class="m-6">
+                <source src="./audios/about.mp3" type="audio/mpeg">
             </audio>
 
         </main>
-        <footer>
-            <div id="add-info">
+        <footer class="bg-black text-white">
+            <div class="flex justify-around ">
                 <div class="address">
-                  <h2>Address</h2>
+                  <h2 class="text-lg">Address</h2>
                   <address>
                       <p>Ethiopia, Addis Ababa</p>
                       <p>5kilo kingGeorge VI Street</p>
@@ -140,9 +150,9 @@
                   </address>
                 </div>
 
-                <div id="social">
-                    <h2>Social media</h2>
-                    <div>
+                <div class="self-center">
+                    <h2 class="text-lg">Social media</h2>
+                    <div class="flex gap-2">
                       <a href="https://www.linkedin.com/in/naol-daba-1b42b4258?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BL%2BAJLt7nSaGwTQKpt70LCA%3D%3D" target="_blank"><i class="linkedin fa-brands fa-linkedin"></i></a>
                       <a href="https://github.com/Naoldaba" target="_blank"><i class="github fa-brands fa-github"></i></a>
                       <a href="#"><i class="facebook fa-brands fa-facebook-f"></i></a>
@@ -152,9 +162,10 @@
                 </div>
 
             </div>
-            <div id="copyright">
+            <div class="text-center text-xs border-t-2 border-white pt-1 mt-1">
                 <span> &copy; Copyright 2023. Made by <a>Naol Daba</a></span>
             </div>
         </footer>
+        <script src="./js/index.js"></script>
     </body>
 </html>
